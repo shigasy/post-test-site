@@ -30,7 +30,6 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
   /*
    ** Nuxt.js dev-modules
    */
@@ -44,13 +43,19 @@ export default {
    */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    '@nuxtjs/proxy'
   ],
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
    */
-  axios: {},
+  /* http methodsがOPTIONにっていたら、バックエンド側を直す */
+  /* axiosのライブラリの使い方 methodsとasyncDataは違う */
+  axios: {
+    baseURL: 'http://localhost:3000/api/v1'
+  },
+  plugins: ['~/plugins/axios'],
   /*
    ** vuetify module configuration
    ** https://github.com/nuxt-community/vuetify-module
@@ -79,6 +84,7 @@ export default {
     /*
      ** You can extend webpack config here
      */
+    hardSource: true,
     extend(config, ctx) {}
   }
 }
