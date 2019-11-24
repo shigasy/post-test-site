@@ -22,19 +22,17 @@
 export default {
   data() {
     return {
-      photo: null,
       images: []
     }
   },
   methods: {
     async submit() {
       const params = {
-        text: 'text_text',
+        name: '',
+        text: 'text_text2',
         images: this.images
       }
       const formData = new FormData()
-      // eslint-disable-next-line no-console
-      console.log(this.images)
       Object.entries(params).forEach(([key, value]) => {
         if (Array.isArray(value)) {
           value.forEach((v, i) => {
@@ -44,18 +42,6 @@ export default {
           formData.append(key, value)
         }
       })
-      // for (let i = 0; i < this.images.length; i++) {
-      //   // const name = 'uploadedImages[' + i + ']'
-      //   const name = 'images'
-      //   console.log(this.images[i])
-      //   formData.append(name, this.images)
-      //   // formData.append(name, JSON.stringify(this.images))
-      // }
-      // eslint-disable-next-line no-console
-      console.log(formData)
-      // formData.append('images', this.images[0])
-      // formData.append('images', this.images[1])
-      // eslint-disable-next-line no-console
       const response = await this.$axios.post('/posts', formData)
       // eslint-disable-next-line no-console
       console.log(response)
