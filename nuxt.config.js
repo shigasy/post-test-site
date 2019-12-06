@@ -53,9 +53,19 @@ export default {
   /* http methodsがOPTIONにっていたら、バックエンド側を直す */
   /* axiosのライブラリの使い方 methodsとasyncDataは違う */
   axios: {
-    baseURL: 'http://localhost:3000/api/v1'
+    baseURL: 'http://localhost:3000/',
+    credentials: true,
+    proxy: true
   },
-  plugins: ['~/plugins/axios'],
+  proxy: {
+    '/api': {
+      target: 'http://localhost:3000/',
+      pathRewrite: {
+        '^/api': '/api/v1/'
+      }
+    }
+  },
+  plugins: [{ src: 'plugins/axios.js', ssr: false }],
   /*
    ** vuetify module configuration
    ** https://github.com/nuxt-community/vuetify-module
