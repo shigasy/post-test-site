@@ -10,7 +10,7 @@ export default {
         withCredentials: true,
         headers: {
           withCredentials: true,
-          'Access-Control-Allow-Origin': 'oshi-loss-api.herokuapp.com'
+          'Access-Control-Allow-Origin': '*'
         }
       })
       .then((data) => {
