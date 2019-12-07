@@ -6,16 +6,13 @@
 export default {
   asyncData({ app, error }) {
     return app.$axios
-      .$get(
-        'https://oshi-loss-api.herokuapp.com/api/v1/users/auth/google_oauth2',
-        {
+      .$get('https://oshi-loss-api.herokuapp.com/api/v1/users/auth/twitter', {
+        withCredentials: true,
+        headers: {
           withCredentials: true,
-          headers: {
-            withCredentials: true,
-            'Access-Control-Allow-Origin': 'oshi-loss-api.herokuapp.com'
-          }
+          'Access-Control-Allow-Origin': 'oshi-loss-api.herokuapp.com'
         }
-      )
+      })
       .then((data) => {
         return { twitterAuthUrl: data.redirect_url }
       })
