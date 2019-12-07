@@ -31,6 +31,28 @@
           test
         </button>
       </nuxt-link>
+      <p>
+        <nuxt-link
+          class="link"
+          style="display: inline-block; "
+          to="/oauth/twitter/redirect"
+        >
+          <button>
+            redirect Twitter
+          </button>
+        </nuxt-link>
+      </p>
+      <p>
+        <nuxt-link
+          class="link"
+          style="display: inline-block; "
+          to="/oauth/google_oauth2/redirect"
+        >
+          <button>
+            redirect Google
+          </button>
+        </nuxt-link>
+      </p>
     </div>
   </v-layout>
 </template>
