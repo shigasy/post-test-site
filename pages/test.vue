@@ -15,7 +15,7 @@ export default {
   },
   asyncData({ app, error }) {
     return app.$axios
-      .$get('/api/test')
+      .$get('/api/posts')
       .then((data) => {
         return { text: data }
       })

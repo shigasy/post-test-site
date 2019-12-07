@@ -59,7 +59,7 @@ export default {
   },
   proxy: {
     '/api': {
-      target: 'http://localhost:3000/',
+      target: 'https://oshi-loss-api.herokuapp.com/',
       pathRewrite: {
         '^/api': '/api/v1/'
       }
