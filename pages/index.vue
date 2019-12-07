@@ -18,8 +18,10 @@
       <button @click="twitter">
         Twitterログイン
       </button>
-      <a href="https://oshi-loss-api.herokuapp.com/api/v1/users/auth/google_oauth2">
-        <button @click="google">
+      <a
+        href="https://oshi-loss-api.herokuapp.com/api/v1/users/auth/google_oauth2"
+      >
+        <button>
           Googleログイン
         </button>
       </a>
