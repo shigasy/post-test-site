@@ -61,7 +61,7 @@ export default {
     '/api': {
       target: 'https://oshi-loss-api.herokuapp.com/',
       pathRewrite: {
-        '^/api': '/api/v1/'
+        '^/api': 'https://oshi-loss-api.herokuapp.com/api/v1'
       }
     }
   },
