@@ -18,9 +18,11 @@
       <button @click="twitter">
         Twitterログイン
       </button>
-      <button @click="google">
-        Googleログイン
-      </button>
+      <a href="https://oshi-loss-api.herokuapp.com/api/v1/users/auth/google_oauth2">
+        <button @click="google">
+          Googleログイン
+        </button>
+      </a>
       <!--      </nuxt-link>-->
       <nuxt-link to="/test">
         <button>
@@ -60,10 +62,12 @@ export default {
       console.log(response)
     },
     twitter() {
-      document.location.pathname = 'https://oshi-loss-api.herokuapp.com/api/users/auth/twitter'
+      document.location.pathname =
+        'https://oshi-loss-api.herokuapp.com/api/users/auth/twitter'
     },
     google() {
-      document.location.pathname = 'https://oshi-loss-api.herokuapp.com/api/users/auth/google_oauth2'
+      document.location.pathname =
+        'https://oshi-loss-api.herokuapp.com/api/users/auth/google_oauth2'
     },
     onFileChange(event) {
       const files = event.target.files || event.dataTransfer.files
