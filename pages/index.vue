@@ -60,10 +60,10 @@ export default {
       console.log(response)
     },
     twitter() {
-      document.location.pathname = 'api/users/auth/twitter'
+      document.location.pathname = 'https://oshi-loss-api.herokuapp.com/api/users/auth/twitter'
     },
     google() {
-      document.location.pathname = 'api/users/auth/google_oauth2'
+      document.location.pathname = 'https://oshi-loss-api.herokuapp.com/api/users/auth/google_oauth2'
     },
     onFileChange(event) {
       const files = event.target.files || event.dataTransfer.files
