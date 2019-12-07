@@ -18,7 +18,7 @@ export default {
       .$get('https://oshi-loss-api.herokuapp.com/api/v1/posts', {
         headers: {
           withCredentials: true,
-          'Access-Control-Allow-Origin': '*'
+          'Access-Control-Allow-Origin': 'oshi-loss-api.herokuapp.com'
         }
       })
       .then((data) => {
