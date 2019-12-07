@@ -4,4 +4,8 @@ export default function({ $axios, redirect }) {
     $axios.setHeader('Access-Control-Allow-Origin', '*')
     $axios.setHeader('Access-Control-Allow-Credentials', true)
   })
+  $axios.onResponse((config) => {
+    $axios.setHeader('Access-Control-Allow-Origin', '*')
+    $axios.setHeader('Access-Control-Allow-Credentials', true)
+  })
 }

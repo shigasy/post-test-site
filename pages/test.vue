@@ -16,7 +16,10 @@ export default {
   asyncData({ app, error }) {
     return app.$axios
       .$get('https://oshi-loss-api.herokuapp.com/api/v1/posts', {
-        withCredentials: true
+        headers: {
+          withCredentials: true,
+          'Access-Control-Allow-Origin': '*'
+        }
       })
       .then((data) => {
         return { text: data }
