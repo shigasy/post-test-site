@@ -35,10 +35,10 @@
         <nuxt-link
           class="link"
           style="display: inline-block; "
-          to="/oauth/twitter/redirect"
+          to="oauth/twitter/redirect"
         >
           <button>
-            redirect Twitter
+            redirect TwitterT
           </button>
         </nuxt-link>
       </p>
@@ -87,11 +87,11 @@ export default {
     },
     twitter() {
       document.location.pathname =
-        'https://oshi-loss-api.herokuapp.com/api/users/auth/twitter'
+        'https://oshi-loss-api.herokuapp.com/api/v1/users/auth/twitter'
     },
     google() {
       document.location.pathname =
-        'https://oshi-loss-api.herokuapp.com/api/users/auth/google_oauth2'
+        'https://oshi-loss-api.herokuapp.com/api/v1/users/auth/google_oauth2'
     },
     onFileChange(event) {
       const files = event.target.files || event.dataTransfer.files

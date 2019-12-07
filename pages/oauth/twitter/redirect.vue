@@ -22,7 +22,7 @@ export default {
       .catch((e) => error({ message: e.message, statusCode: e.statusCode }))
   },
   mounted() {
-    window.location.href = this.twitterAuthUrl
+    window.open(this.twitterAuthUrl)
   }
 }
 </script>
