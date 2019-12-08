@@ -25,6 +25,16 @@
           Googleログイン
         </button>
       </a>
+      <a
+        href="https://api.twitter.com/oauth/authenticate?oauth_token=wP0BvgAAAAABBFfUAAABbuNw2TM"
+      >
+        <button>
+          ログイン！！！！！
+        </button>
+      </a>
+      <button @click="test">
+        ログイン2
+      </button>
       <!--      </nuxt-link>-->
       <nuxt-link to="/test">
         <button>
@@ -92,6 +102,10 @@ export default {
     google() {
       document.location.pathname =
         'https://oshi-loss-api.herokuapp.com/api/v1/users/auth/google_oauth2'
+    },
+    test() {
+      window.location.href =
+        'https://api.twitter.com/oauth/authenticate?oauth_token=GM6jxwAAAAABBFfUAAABbuNzizg'
     },
     onFileChange(event) {
       const files = event.target.files || event.dataTransfer.files

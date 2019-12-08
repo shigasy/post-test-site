@@ -54,17 +54,18 @@ export default {
   /* http methodsがOPTIONにっていたら、バックエンド側を直す */
   /* axiosのライブラリの使い方 methodsとasyncDataは違う */
   axios: {
-    baseURL: 'https://oshi-loss-api.herokuapp.com/',
+    // baseURL: 'https://oshi-loss-api.herokuapp.com/',
     credentials: true,
     proxy: true
   },
   proxy: {
-    '/api': {
-      target: 'https://oshi-loss-api.herokuapp.com/',
-      pathRewrite: {
-        '^/api': 'https://oshi-loss-api.herokuapp.com/api/v1'
-      }
-    }
+    '/api': 'https://localhost:3000/'
+    // '/api': {
+    //   target: 'https://oshi-loss-api.herokuapp.com/',
+    //   pathRewrite: {
+    //     '^/api': 'https://oshi-loss-api.herokuapp.com/api/v1'
+    //   }
+    // }
   },
   plugins: [{ src: 'plugins/axios.js', ssr: false }],
   /*
