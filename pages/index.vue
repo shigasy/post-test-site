@@ -14,55 +14,25 @@
         </label>
         <button type="submit" class="button button--inverse">submit</button>
       </form>
-      <!--      <nuxt-link to="/oauth/twitter/redirect">-->
-      <button @click="twitter">
-        Twitterログイン
-      </button>
-      <a
-        href="https://oshi-loss-api.herokuapp.com/api/v1/users/auth/google_oauth2"
-      >
-        <button>
-          Googleログイン
-        </button>
-      </a>
-      <a
-        href="https://api.twitter.com/oauth/authenticate?oauth_token=wP0BvgAAAAABBFfUAAABbuNw2TM"
-      >
-        <button>
-          ログイン！！！！！
-        </button>
-      </a>
-      <button @click="test">
-        ログイン2
-      </button>
-      <!--      </nuxt-link>-->
-      <nuxt-link to="/test">
-        <button>
-          test
-        </button>
-      </nuxt-link>
-      <p>
-        <nuxt-link
-          class="link"
-          style="display: inline-block; "
-          to="oauth/twitter/redirect"
-        >
+      <p></p>
+      <br />
+      <div>
+        <a @click="loginTwitter">
+          Twitterアカウントでログイン
+        </a>
+      </div>
+      <div>
+        <a @click="loginGoogle">
+          Googleアカウントでログイン
+        </a>
+      </div>
+      <div class="test">
+        <nuxt-link to="/test">
           <button>
-            redirect TwitterT
+            test（ログイン必要）
           </button>
         </nuxt-link>
-      </p>
-      <p>
-        <nuxt-link
-          class="link"
-          style="display: inline-block; "
-          to="/oauth/google_oauth2/redirect"
-        >
-          <button>
-            redirect Google
-          </button>
-        </nuxt-link>
-      </p>
+      </div>
     </div>
   </v-layout>
 </template>
@@ -95,22 +65,25 @@ export default {
       // eslint-disable-next-line no-console
       console.log(response)
     },
-    twitter() {
-      document.location.pathname =
-        'https://oshi-loss-api.herokuapp.com/api/v1/users/auth/twitter'
-    },
-    google() {
-      document.location.pathname =
-        'https://oshi-loss-api.herokuapp.com/api/v1/users/auth/google_oauth2'
-    },
-    test() {
-      window.location.href =
-        'https://api.twitter.com/oauth/authenticate?oauth_token=GM6jxwAAAAABBFfUAAABbuNzizg'
-    },
     onFileChange(event) {
       const files = event.target.files || event.dataTransfer.files
       this.images.push(files[0])
+    },
+    loginTwitter() {
+      // TODO: devとproを分岐
+      window.location.href =
+        'https://oshi-loss-api.herokuapp.com/api/v1/users/auth/twitter'
+    },
+    // TODO: devとproを分岐
+    loginGoogle() {
+      window.location.href =
+        'https://oshi-loss-api.herokuapp.com/api/v1/users/auth/google_oauth2'
     }
   }
 }
 </script>
+<style scoped>
+.test {
+  margin: 50px 0;
+}
+</style>
