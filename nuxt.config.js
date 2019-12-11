@@ -1,12 +1,12 @@
 import colors from 'vuetify/es5/util/colors'
 
-const environment = process.env.NODE_ENV || 'development'
-const envSet = require(`./env.${environment}.js`)
+// const environment = process.env.NODE_ENV || 'development'
+// const envSet = require(`./env.${environment}.js`)
 
 export default {
   mode: 'spa',
 
-  env: envSet,
+  // env: envSet,
   /*
    ** Headers of the page
    */
@@ -58,18 +58,18 @@ export default {
   /* http methodsがOPTIONにっていたら、バックエンド側を直す */
   /* axiosのライブラリの使い方 methodsとasyncDataは違う */
   axios: {
-    // baseURL: 'https://oshi-loss-api.herokuapp.com/',
+    baseURL: 'http://localhost:3000',
     credentials: true,
     proxy: true
   },
   proxy: {
-    '/api': 'https://localhost:3000/'
-    // '/api': {
-    //   target: 'https://oshi-loss-api.herokuapp.com/',
-    //   pathRewrite: {
-    //     '^/api': 'https://oshi-loss-api.herokuapp.com/api/v1'
-    //   }
-    // }
+    '/api': {
+      target: 'http://localhost:3000/',
+      // target: 'https://oshi-loss-api.herokuapp.com/',
+      pathRewrite: {
+        '^/api': '/api/v1/'
+      }
+    }
   },
   plugins: [{ src: 'plugins/axios.js', ssr: false }],
   /*

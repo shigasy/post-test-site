@@ -1,3 +1,3 @@
 module.exports = {
-  apiBaseUrl: 'http://your-api.com/api'
+  apiBaseUrl: 'http://localhost:8000'
 }
