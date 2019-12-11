@@ -71,8 +71,8 @@ export default {
     },
     loginTwitter() {
       // TODO: devとproを分岐
-      window.location.href =
-        'https://oshi-loss-api.herokuapp.com/api/v1/users/auth/twitter'
+      // window.location.href = `${process.env.apiBaseUrl}/api/v1/users/auth/twitter`
+      window.location.href = `http://localhost:3000/api/v1/users/auth/twitter`
     },
     // TODO: devとproを分岐
     loginGoogle() {
