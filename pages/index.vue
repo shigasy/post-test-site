@@ -33,6 +33,9 @@
           </button>
         </nuxt-link>
       </div>
+      <div @click="test">
+        あいうえお
+      </div>
     </div>
   </v-layout>
 </template>
@@ -69,15 +72,18 @@ export default {
       const files = event.target.files || event.dataTransfer.files
       this.images.push(files[0])
     },
+    test() {
+      console.log(process.env.apiBaseUrl)
+    },
     loginTwitter() {
       // TODO: devとproを分岐
       // window.location.href = `${process.env.apiBaseUrl}/api/v1/users/auth/twitter`
-      window.location.href = `http://localhost:3000/api/v1/users/auth/twitter`
+      window.location.href = `${process.env.apiBaseUrl}/api/v1/users/auth/twitter`
     },
     // TODO: devとproを分岐
     loginGoogle() {
       window.location.href =
-        'https://oshi-loss-api.herokuapp.com/api/v1/users/auth/google_oauth2'
+        `${process.env.apiBaseUrl}/api/v1/users/auth/google_oauth2`
     }
   }
 }

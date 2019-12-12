@@ -1,12 +1,11 @@
 import colors from 'vuetify/es5/util/colors'
 
-// const environment = process.env.NODE_ENV || 'development'
-// const envSet = require(`./env.${environment}.js`)
-
+const environment = process.env.NODE_ENV || 'development'
+const envSet = require(`./env.${environment}.js`)
 export default {
   mode: 'spa',
 
-  // env: envSet,
+  env: envSet,
   /*
    ** Headers of the page
    */
