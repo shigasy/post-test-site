@@ -58,7 +58,7 @@ export default {
   /* axiosのライブラリの使い方 methodsとasyncDataは違う */
   axios: {
     baseURL:
-      `${process.env.apiBaseUrl}/api/v1` || 'http://localhost:3000/api/v1',
+      `${process.env.API_BASE_URL}/api/v1` || 'http://localhost:3000/api/v1',
     credentials: true
   },
   plugins: [{ src: 'plugins/axios.js', ssr: false }],
