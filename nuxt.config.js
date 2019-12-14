@@ -57,14 +57,13 @@ export default {
   /* http methodsがOPTIONにっていたら、バックエンド側を直す */
   /* axiosのライブラリの使い方 methodsとasyncDataは違う */
   axios: {
-    baseURL: 'http://localhost:3000',
+    baseURL: process.env.apiBaseUrl,
     credentials: true,
     proxy: true
   },
   proxy: {
     '/api': {
-      target: 'http://localhost:3000/',
-      // target: 'https://oshi-loss-api.herokuapp.com/',
+      target: process.env.apiBaseUrl || 'http://localhost:3000',
       pathRewrite: {
         '^/api': '/api/v1/'
       }
