@@ -60,17 +60,7 @@ export default {
     baseURL:
       `${process.env.apiBaseUrl}/api/v1` || 'http://localhost:3000/api/v1',
     credentials: true
-    // proxy: true
   },
-  // proxy: {
-  // '/api': 'https://oshi-loss-api.herokuapp.com'
-  // '/api': {
-  //   target: 'https://oshi-loss-api.herokuapp.com',
-  //   pathRewrite: {
-  //     '^/api': '/api/v1'
-  //   }
-  // }
-  // },
   plugins: [{ src: 'plugins/axios.js', ssr: false }],
   /*
    ** vuetify module configuration
