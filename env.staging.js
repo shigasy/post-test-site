@@ -1,3 +1,3 @@
 module.exports = {
-  apiBaseUrl: 'http://localhost:8000'
+  apiBaseUrl: process.env.API_BASE_URL
 }
