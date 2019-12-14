@@ -1,0 +1,2 @@
+/api/*  https://oshi-loss-api.herokuapp.com/:splat  200
+/*    /index.html   200
