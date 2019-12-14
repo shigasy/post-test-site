@@ -20,7 +20,7 @@ export default {
   },
   asyncData({ app, error }) {
     return app.$axios
-      .$get(`/api/posts`, {
+      .$get(`/posts`, {
         withCredentials: true,
         headers: {
           'Access-Control-Allow-Origin': '*'
