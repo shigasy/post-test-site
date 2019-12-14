@@ -20,7 +20,7 @@ export default {
   },
   asyncData({ app, error }) {
     return app.$axios
-      .$get(`${process.env.apiBaseUrl}/api/posts`, {
+      .$get(`${process.env.apiBaseUrl}/api/v1/posts`, {
         withCredentials: true,
         headers: {
           'Access-Control-Allow-Origin': '*'
