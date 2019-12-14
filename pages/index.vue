@@ -73,7 +73,10 @@ export default {
       this.images.push(files[0])
     },
     test() {
+      // eslint-disable-next-line no-console
       console.log(process.env.apiBaseUrl)
+      // eslint-disable-next-line no-console
+      console.log(process.env.NODE_ENV)
     },
     loginTwitter() {
       // TODO: devとproを分岐
@@ -82,8 +85,7 @@ export default {
     },
     // TODO: devとproを分岐
     loginGoogle() {
-      window.location.href =
-        `${process.env.apiBaseUrl}/api/v1/users/auth/google_oauth2`
+      window.location.href = `${process.env.apiBaseUrl}/api/v1/users/auth/google_oauth2`
     }
   }
 }
