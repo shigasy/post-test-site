@@ -64,7 +64,7 @@ export default {
     '/api': {
       target: 'https://oshi-loss-api.herokuapp.com',
       pathRewrite: {
-        '^/api': '/api/v1'
+        '^/api': '/'
       }
     }
   },
@@ -93,9 +93,9 @@ export default {
   /*
    ** Build configuration
    */
-  // generate: {
-  //   fallback: true
-  // },
+  generate: {
+    fallback: true
+  },
   build: {
     /*
      ** You can extend webpack config here
