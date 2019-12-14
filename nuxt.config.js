@@ -59,8 +59,7 @@ export default {
   axios: {
     baseURL:
       `${process.env.API_BASE_URL}/api/v1` || 'http://localhost:3000/api/v1',
-    credentials: true,
-    proxy: true
+    credentials: true
   },
   plugins: [{ src: 'plugins/axios.js', ssr: false }],
   /*
