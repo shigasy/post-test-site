@@ -62,10 +62,7 @@ export default {
   },
   proxy: {
     '/api': {
-      target:
-        process.env.API_BASE_URL ||
-        'https://oshi-loss-api.herokuapp.com' ||
-        'http://localhost:3000',
+      target: 'https://oshi-loss-api.herokuapp.com',
       pathRewrite: {
         '^/api': '/api/v1/'
       }
