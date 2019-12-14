@@ -61,12 +61,13 @@ export default {
     proxy: true
   },
   proxy: {
-    '/api': {
-      target: 'https://oshi-loss-api.herokuapp.com',
-      pathRewrite: {
-        '^/api': '/'
-      }
-    }
+    '/api': 'https://oshi-loss-api.herokuapp.com'
+    // '/api': {
+    //   target: 'https://oshi-loss-api.herokuapp.com',
+    //   pathRewrite: {
+    //     '^/api': '/'
+    //   }
+    // }
   },
   plugins: [{ src: 'plugins/axios.js', ssr: false }],
   /*
