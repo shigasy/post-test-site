@@ -58,18 +58,18 @@ export default {
   /* axiosのライブラリの使い方 methodsとasyncDataは違う */
   axios: {
     baseURL: 'https://oshi-loss-api.herokuapp.com/api/v1',
-    credentials: true
-    // proxy: true
+    credentials: true,
+    proxy: true
   },
-  // proxy: {
-  //   '/api': 'https://oshi-loss-api.herokuapp.com'
-  // '/api': {
-  //   target: 'https://oshi-loss-api.herokuapp.com',
-  //   pathRewrite: {
-  //     '^/api': '/'
-  //   }
-  // }
-  // },
+  proxy: {
+    // '/api': 'https://oshi-loss-api.herokuapp.com'
+    '/api': {
+      target: 'https://oshi-loss-api.herokuapp.com',
+      pathRewrite: {
+        '^/api': '/'
+      }
+    }
+  },
   plugins: [{ src: 'plugins/axios.js', ssr: false }],
   /*
    ** vuetify module configuration

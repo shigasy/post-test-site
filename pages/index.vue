@@ -77,6 +77,16 @@ export default {
       console.log(process.env.apiBaseUrl)
       // eslint-disable-next-line no-console
       console.log(process.env.NODE_ENV)
+      this.$axios
+        .$get(`/api/posts`, {
+          withCredentials: true,
+          headers: {
+            'Access-Control-Allow-Origin': '*'
+          }
+        })
+        .then((data) => {
+          return { text: data }
+        })
     },
     loginTwitter() {
       // TODO: devとproを分岐
