@@ -87,13 +87,10 @@ export default {
         })
     },
     loginTwitter() {
-      // TODO: devとproを分岐
-      // window.location.href = `${process.env.apiBaseUrl}/api/v1/users/auth/twitter`
-      window.location.href = `${process.env.apiBaseUrl}/api/v1/users/auth/twitter`
+      window.location.href = `${process.env.apiBaseUrl}/users/auth/twitter`
     },
-    // TODO: devとproを分岐
     loginGoogle() {
-      window.location.href = `${process.env.apiBaseUrl}/api/v1/users/auth/google_oauth2`
+      window.location.href = `${process.env.apiBaseUrl}/users/auth/google_oauth2`
     }
   }
 }
