@@ -13,7 +13,7 @@
     "start": "nuxt start",
     "start:stg": "cross-env NODE_ENV=\"staging\" nuxt start",
     "start:prod": "cross-env NODE_ENV=\"production\" nuxt start",
-    "generate": "cross-env NODE_ENV=\"productioon\" nuxt generate"
+    "generate": "cross-env NODE_ENV=\"production\" nuxt generate"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.8.0",

@@ -57,8 +57,7 @@ export default {
   /* http methodsがOPTIONにっていたら、バックエンド側を直す */
   /* axiosのライブラリの使い方 methodsとasyncDataは違う */
   axios: {
-    baseURL:
-      `${process.env.API_BASE_URL}/api/v1` || 'http://localhost:3000/api/v1',
+    baseURL: process.env.API_BASE_URL || 'http://localhost:3000/api/v1',
     credentials: true
   },
   plugins: [{ src: 'plugins/axios.js', ssr: false }],
