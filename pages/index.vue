@@ -75,8 +75,6 @@ export default {
     test() {
       // eslint-disable-next-line no-console
       console.log(process.env.apiBaseUrl)
-      // eslint-disable-next-line no-console
-      console.log(process.env.NODE_ENV)
       this.$axios
         .$get(`/posts`, {
           withCredentials: true,
