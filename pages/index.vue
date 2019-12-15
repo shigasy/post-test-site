@@ -50,9 +50,10 @@ export default {
   methods: {
     async submit() {
       const params = {
-        name: '',
+        title: 'title',
         text: 'text_text2',
-        images: this.images
+        images: this.images,
+        album_id: ''
       }
       const formData = new FormData()
       Object.entries(params).forEach(([key, value]) => {
